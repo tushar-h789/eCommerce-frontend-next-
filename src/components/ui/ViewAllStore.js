@@ -2,11 +2,11 @@ import { getViewAllStore } from "@/utils/getViewAllStore"
 
 const ViewAllStore = async() => {
     const stores = await getViewAllStore()
-    // console.log(stores.ownerId);
+    // console.log(stores);
   return (
     <div>
       <h3 className="text-xl bg-gray-400 text-white font-semibold p-2">
-        All Sub Category: {stores.length}
+        All Store: {stores.length}
       </h3>
       <div className="bg-gray-200 p-2 h-[500px] overflow-scroll overflow-x-hidden">
         {stores.map((store) => (

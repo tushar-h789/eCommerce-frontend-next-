@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const ViewCategory = async () => {
   const categories = await getViewCategory();
-  // console.log(categories.data);
+  console.log(categories.data);
   return (
     <div>
       <h3 className="text-xl bg-gray-400 text-white font-semibold p-2">
