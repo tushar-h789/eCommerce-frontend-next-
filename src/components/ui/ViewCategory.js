@@ -12,13 +12,19 @@ const ViewCategory = async () => {
       <div className="bg-gray-200 p-2 h-[500px] overflow-scroll overflow-x-hidden">
         {categories.data.map((category) => (
           <div key={category._id}>
-            <div className="border border-gray-300 text-center">
+            <div className="border border-gray-300 text-center dropdown">
               <p className="py-2">
-                Category: <Link href={`/category/${category._id}`}><strong>{category.name}</strong></Link>
+                Category:{" "}
+                <Link href={`/category/${category._id}`}>
+                  <strong>{category.name}</strong>
+                </Link>
               </p>
-              <p className="py-2">
-                Owner Name: <strong>{category?.ownerId?.name}</strong>
-              </p>
+              {category.subCategoryId.length > 0 &&
+                category.subCategoryId.map((subCategory) => (
+                  <div key={subCategory._id}>
+                    <p className="my-2 text-white">{subCategory.name}</p>
+                  </div>
+                ))}
             </div>
           </div>
         ))}

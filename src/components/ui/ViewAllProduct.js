@@ -41,6 +41,38 @@ const ViewAllProduct = async () => {
                   Regular Price: <del>{product.regularprice}</del>
                 </p>
               )}
+
+              <h4 className="text-xl font-semibold my-2">Variant: </h4>
+              {product.variantsId.map((variant) => (
+                <div key={variant._id} className="border border-red-300">
+                  <p>Variant Name: {variant.name}</p>
+                  <div>
+                    <h4>Description:</h4>
+                    <p
+                      className="py-2"
+                      // dangerouslySetInnerHTML={{ __html: variant.description }}
+                    ></p>
+                  </div>
+                  <Image
+                    src={`http://localhost:7000${variant.image}`}
+                    width={100}
+                    height={100}
+                    alt="product"
+                  />
+                  {variant.salesprice ? (
+                    <>
+                      <p>Sales Price: {variant.salesprice}</p>
+                      <p>
+                        Regular Price: <del>{variant.regularprice}</del>
+                      </p>
+                    </>
+                  ) : (
+                    <p>
+                      Regular Price: <del>{variant.regularprice}</del>
+                    </p>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         ))}

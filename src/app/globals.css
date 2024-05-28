@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown div {
+    background-color: slategray;
+    display: none;
+}
+
+.dropdown:hover div {
+    display: block;
+    background:slategrey;
+    overflow: hidden;
+    transition: width 2s, height 2s, transform 2s;
+}
