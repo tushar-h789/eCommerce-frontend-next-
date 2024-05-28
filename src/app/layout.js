@@ -1,5 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+  /* The following line can be included in your src/index.js or App.js file */
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,7 +12,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="light"className="bg-[#F2F4F8]" >
       <body className={inter.className}>{children}</body>
     </html>
   );

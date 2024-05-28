@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+    margin: 0;
+    padding: 0;
+}
 
 .dropdown {
     position: relative;
@@ -17,4 +21,8 @@
     background:slategrey;
     overflow: hidden;
     transition: width 2s, height 2s, transform 2s;
+}
+
+.Link{
+    text-decoration: none;
 }
