@@ -5,11 +5,12 @@ import { Container } from "react-bootstrap";
 const ViewCategory = async () => {
   const categories = await getViewCategory();
   return (
+    <div className="drop-shadow-lg	bg-white">
     <Container>
-      <div className="flex gap-3">
+      <div className="flex gap-3 items-center">
         {categories.data.map((category) => (
           <div key={category._id}>
-            <div className="mb-10">
+            <div className="my-3">
               <Link
                 href={`/category/${category._id}`}
                 className="no-underline text-inherit hover:text-orange-700"
@@ -29,6 +30,7 @@ const ViewCategory = async () => {
         ))}
       </div>
     </Container>
+    </div>
   );
 };
 
