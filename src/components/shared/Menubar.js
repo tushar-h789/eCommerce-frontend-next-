@@ -11,7 +11,7 @@ const Menubar = () => {
   const expand = "lg"; // Choose the desired breakpoint
 
   return (
-    <div className="bg-blue-950 py-2">
+    <div className="bg-[#16082A] py-2">
       <Container >
         <Navbar expand={expand}>
           <Container fluid>

@@ -2,7 +2,7 @@ import { Container } from "react-bootstrap";
 
 const Footer = () => {
   return (
-    <div className="bg-blue-950 mt-20">
+    <div className="bg-[#16082A] mt-20">
       <Container>
         <footer className="footer p-10 py-52 text-white text-xl">
           <aside className="gap-4">

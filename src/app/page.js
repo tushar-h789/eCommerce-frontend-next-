@@ -1,5 +1,8 @@
 import Footer from "@/components/shared/Footer";
 import Menubar from "@/components/shared/Menubar";
+import Banner from "@/components/ui/Banner";
+import FeaturedCategory from "@/components/ui/FeaturedCategory/FeaturedCategory";
+import FeaturedProducts from "@/components/ui/FeaturedProducts/FeaturedProducts";
 import ViewAllProduct from "@/components/ui/ViewAllProduct";
 import ViewAllStore from "@/components/ui/ViewAllStore";
 import ViewCategory from "@/components/ui/ViewCategory";
@@ -10,6 +13,9 @@ export default function Home() {
     <div>
       <Menubar/>
       <ViewCategory/>
+      <Banner/>
+      <FeaturedCategory/>
+      <FeaturedProducts/>
 
       <Footer/>
       {/* <h2 className="text-4xl font-bold text-center text-gray-700">
